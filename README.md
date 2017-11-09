@@ -1,4 +1,4 @@
-# BitTorrent-Client
+# Live Video Streamer
 Course Project for CS425 IITK
 
 Contributors:
