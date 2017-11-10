@@ -1,6 +1,9 @@
+def client():
+	print 1
+
 def main():
-        return 0
+	client()
 
 if __name__ == '__main__':
-        main()
+    main()
 
