@@ -8,6 +8,6 @@ Contributors:
 
 # How To Run
 
-$ python web.py
+$ python client.py
 
-Video will be streamed on <your-IP>:5000 OR localhost:5000
+Video will be streamed on &lt;your-IP&gt;:5000 OR localhost:5000
