@@ -8,6 +8,8 @@ Contributors:
 
 # How To Run
 
-$ python client.py
+On one terminal:
+$ python server.py
 
-Video will be streamed on &lt;your-IP&gt;:5000 OR localhost:5000
+On other terminal:
+$ python client.py

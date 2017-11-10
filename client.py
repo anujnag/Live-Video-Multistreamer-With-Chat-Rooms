@@ -1,24 +1,27 @@
+# client2.py
 #!/usr/bin/env python
 
-from flask import Flask, render_template, Response
-from server import VideoCamera
+import socket
 
-app = Flask(__name__)
+TCP_IP = 'localhost'
+TCP_PORT = 9001
+BUFFER_SIZE = 1024
 
-@app.route('/')
-def index():
-    return render_template('index.html')
-
-def gen(camera):
+s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+s.connect((TCP_IP, TCP_PORT))
+with open('received_file', 'wb') as f:
+    print 'file opened'
     while True:
-        frame = camera.get_frame()
-        yield (b'--frame\r\n'
-               b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n\r\n')
+        #print('receiving data...')
+        data = s.recv(BUFFER_SIZE)
+        print('data=%s', (data))
+        if not data:
+            f.close()
+            print 'file close()'
+            break
+        # write data to a file
+        f.write(data)
 
-@app.route('/video_feed')
-def video_feed():
-    return Response(gen(VideoCamera()),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
-
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+print('Successfully get the file')
+s.close()
+print('connection closed')
