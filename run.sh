@@ -1,2 +1,2 @@
 #!/bin/sh
-python app.py
+python Video_Multistreaming/app.py
