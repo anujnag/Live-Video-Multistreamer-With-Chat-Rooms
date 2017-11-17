@@ -8,6 +8,14 @@ Contributors:
 
 # How To Run
 
-$ bash run.sh
+1) Open two terminals
 
-Video will be streamed on &lt;your-IP&gt;:5000 OR localhost:5000
+2) Terminal 1
+
+$ bash video.sh
+
+   Terminal 2
+
+$ bash chat.sh
+
+Video will be streamed on &lt;your-IP&gt;:5001 OR localhost:5001
