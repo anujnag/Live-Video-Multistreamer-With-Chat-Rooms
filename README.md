@@ -8,6 +8,6 @@ Contributors:
 
 # How To Run
 
-$ python client.py
+$ bash run.sh
 
 Video will be streamed on &lt;your-IP&gt;:5000 OR localhost:5000
