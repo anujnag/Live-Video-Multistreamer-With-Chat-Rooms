@@ -8,14 +8,18 @@ Contributors:
 
 # How To Run
 
-1) Open two terminals
+1) Open three terminals
 
 2) Terminal 1
 
-$ bash video.sh
+$ bash authenticate.sh
 
    Terminal 2
 
+$ bash video.sh
+
+   Terminal 3
+
 $ bash chat.sh
 
-Video will be streamed on &lt;your-IP&gt;:5001 OR localhost:5001
+Video will be streamed on &lt;your-IP&gt;:5000 OR localhost:5000
