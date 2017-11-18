@@ -1,0 +1,57 @@
+body {
+        background-image: url("http://www.guoguiyan.com/data/out/203/69451676-twitch-wallpapers.png");
+        background-size: 1400px 900px;
+}
+h3 {
+        color: white;
+}
+ul#navigation {
+    	list-style-type: none;
+    	margin: 0;
+    	padding: 0;
+    	overflow: hidden;
+    	background-color: #333;
+    	position: fixed;
+    	top: 0;
+    	left: 0;
+    	width: 100%;
+}
+
+.locations {
+	font-size: 20px;
+    	text-align: center;
+    	padding: 5px;
+    	border-radius: 4px;
+    	background-color: lightgrey;
+    	margin-top: 1px;	
+    	margin-left: 2px;
+    	margin-right: 2px;
+    	margin-bottom: 0px;
+    	border-style: ridge;
+    	border-width: 4px;
+    	border-color: lightgrey;
+}
+
+.locations:hover {
+    	background-color: yellow;
+}
+
+li {	
+    	float: left;
+}
+
+li a {
+    	display: block;
+    	color: white;
+    	text-align: center;
+    	padding: 14px 16px;
+    	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    	background-color: #111;
+}
+
+.active {
+	    background-color: #4CAF50;
+}
