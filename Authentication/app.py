@@ -9,10 +9,6 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'top secret!'
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
 app.config['OAUTH_CREDENTIALS'] = {
-    'facebook': {
-        'id': '878405595655272',
-        'secret': 'cedf3705d4252b8b5ddbbb31e320ab39'
-    },
     'twitter': {
         'id': '3wAMPZybOJjV1hN6uuoL2QPUj',
         'secret': 'bJYwsetAeJch1N1naLdgSB1Qj2GXvoJSv9Gj43o9t5KCSwdjBl'
