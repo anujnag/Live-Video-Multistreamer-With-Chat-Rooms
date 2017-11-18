@@ -2,27 +2,34 @@
     <head>
         <title>Welcome to Enigma - Live Video Multistreaming with Chat Room Support</title>
 	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     </head>
     <body>
 	<ul id="navigation">
   		<li><a class="active" href="#home">Home</a></li>
-  		<li><a href="#letsmeet">Let's Meet</a></li>
-  		<li><a href="#results">Results</a></li>
+  		<li><a href="#team">Team</a></li>
+  		<li><a href="#about">About Us</a></li>
   		<li><a href="#contact">Contact</a></li>
-  		<li><a href="#about">About</a></li>
   		<li style="float:right"><a class="active" href="#logout">Sign Up</a></li>
 	</ul><br><br><br>
-        <h1>Welcome to Enigma!</h1>
-        {% for message in get_flashed_messages() %}
-            <p><b>Error</b>: {{ message }}</p>
-        {% endfor %}
-        {% if current_user.is_authenticated %}
-            <h2>Hi, {{ current_user.nickname }}!</h2>
-            <p><a href="{{ url_for('logout') }}">Logout</a></p>
-        {% else %}
-            <h2>I don't know you!</h2>
-            <p><a href="{{ url_for('oauth_authorize', provider='twitter') }}">Login with Twitter</a></p>
-	    <img src="{{url_for('static', filename='twitter.png')}}" width="70" height="60" />
+	<div class="container">
+	    <div class ="jumbotron">
+        	<h1>Welcome to Enigma :)</h1>
+        	{% for message in get_flashed_messages() %}
+        	    <p><b>Error</b>: {{ message }}</p>
+        	{% endfor %}
+        	{% if current_user.is_authenticated %}
+        	    <h2>Hi, {{ current_user.nickname }}!</h2>
+        	    <p><a href="{{ url_for('logout') }}" class="btn btn-primary btn-lg">Logout</a></p>
+        	{% else %}
+        	    <h2>I don't know you!</h2>
+        	    <p><a href="{{ url_for('oauth_authorize', provider='twitter') }}" class="btn btn-primary btn-lg">Login with Twitter</a>
+		    <img src="{{url_for('static', filename='twitter.png')}}" width="70" height="60" /></p>
         {% endif %}
+	    </div>
+	</div>
     </body>
 </html>
