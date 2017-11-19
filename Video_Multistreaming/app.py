@@ -55,4 +55,4 @@ def video(filename):
     return render_template('play2.html', title=filename, video_file=filename)        
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', threaded=True)
+    app.run(host='0.0.0.0', port=5002, threaded=True)

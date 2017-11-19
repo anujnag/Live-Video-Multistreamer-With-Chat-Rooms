@@ -1,10 +1,16 @@
 <html>
   <head>
     <title>Live Video Multi-Streamer with Chat Rooms</title>
+    <style>
+    body {
+	background: #eee;
+	font-family: sans-serif;
+    }
+    </style>
   </head>
   <body>
-    <img src="{{ url_for('video_feed') }}"><br>
-    <a href="/static_content_m">Play Some Music</a>
-    <a href="/static_content_v">Play Some Video</a>
+    <img src="{{ url_for('video_feed') }}" width="680" height="550"><br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+    <a href="/static_content_m" class="btn btn-primary btn-lg">Play Some Music</a>&emsp;
+    <a href="/static_content_v" class="btn btn-primary btn-lg">Play Some Video</a>
   </body>
 </html>
